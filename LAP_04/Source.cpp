@@ -145,7 +145,8 @@ void move(int x,int y,int m)
 				if (x>70 && x<=80)
 				{
 					m = _getch();
-					if (m == 'a') { draw(--x, y); }
+					deleteXY(x, 1);
+					if (m == 'a') { draw(--x, y);  deleteXY(x, 1);}
 					if (m == 'w') { draw(x, --y); deleteXY(x, y + 1); }
 					if (m == 's') { draw(x, ++y); deleteXY(x, y - 1); }
 
